@@ -1,0 +1,196 @@
+/* 
+
+*/
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+}
+/* =========================================================================================== */
+.container {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    /* overflow: hidden; */
+}
+
+/* =========================================================================================== */
+.container .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Chiều rộng ".slider" bọc ngoài bằng tổng chiều rộng 5 ".slide" bên trong*/
+    width: 500%;
+
+    height: 100%;
+
+    animation: animate 10s linear infinite;
+}
+
+/* =========================================================================================== */
+.container .slider .slide {
+    position: relative;
+
+    /* Lấy theo chiều rộng của ".slider" là parent */
+    width: 20%;
+
+    height: 100%;
+
+    /* Dùng "float:left" ở đây là tất cả 5 slide sẽ dồn lên 1 hàng
+    Chú ý là mỗi slide là 1 div ==>> dạng block chứ không phải inline ==>> trình bày theo cột
+    */
+    float: left;
+
+    /* border: 1px solid red; */
+}
+
+/* =========================================================================================== */
+.container .slider .slide .caption {
+    position: absolute;
+
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+
+    /* bottom: 160px; */
+    /* left: 160px; */
+    /* right: 160px; */
+
+    padding: 30px;
+
+    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(0, 0, 0, 0.4);
+    
+    box-sizing: border-box;
+    
+    transition: 0.5s;
+
+    /* border: 1px solid blue; */
+}
+
+.container .slider .slide .caption h2 {
+    margin: 0 0 20px;
+    padding: 0;
+
+    color: #fff;
+    
+    font-size: 48px;
+
+    transition: 0.5s;
+
+}
+
+.container .slider .slide .caption p {
+    margin: 0;
+    padding: 0;
+
+    color: #fff;
+    
+    font-size: 18px;
+
+    transition: 0.5s;
+
+    line-height: 1.5;
+}
+
+/* =========================================================================================== */
+/* Dùng ảnh làm nền */
+.container .slider .slide.slide1 {
+    background: url(images/img1_2400.jpg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide.slide2 {
+    background: url(images/img2_2400.jpg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide.slide3 {
+    background: url(images/img3_2400.jpg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide.slide4 {
+    background: url(images/img4_2400.jpg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================================================================================== */
+@keyframes animate {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/* =========================================================================================== */
+@media (max-width: 768px)
+{
+    .container .slider .slide .caption {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+
+        
+        padding: 20px;
+    }
+    
+    .container .slider .slide .caption h2 {
+        margin: 0 0 10px;
+        font-size: 30px;
+    }
+    
+    .container .slider .slide .caption p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+
+
+
+
+
+
